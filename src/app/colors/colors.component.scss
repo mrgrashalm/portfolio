@@ -1,0 +1,49 @@
+// div {
+//     height: 100px;
+// }
+
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .palette {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 1rem;
+    }
+
+    .palette-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .color {
+      height: 40px;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0.5rem;
+      color: #000;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+
+    .color:last-child {
+      margin-bottom: 0;
+    }
+
+    .dark-text {
+      color: #fff;
+    }
