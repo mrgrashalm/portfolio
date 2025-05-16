@@ -1,0 +1,174 @@
+// General
+
+.small-logo {
+    img {
+        height: 80px;
+    }
+}
+
+.header-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    h2 { 
+        a {
+            display: block;
+            text-align: center;
+            // padding-top: 15px;
+            // border: 1px solid var(--neutral);
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        align-content: center;
+    }
+}
+
+.header-right {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+// Menu
+
+.container {
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 3fr 0.5fr;
+    grid-gap: 10px;
+    height: var(--header-height);
+}
+
+
+// Burger-Menu
+
+.burger-container {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background);
+    height: var(--header-height);
+}
+
+#sidebarMenu {
+    height: 171px; /*change here related your menu height*/
+    position: fixed;
+    overflow: none;
+    width: 100%;
+    z-index: 100;
+    transform: translateY(-171px); /*change here related your menu height*/
+}
+.main-content-wrapper a{
+    width: 100%;
+    height: 40px;
+    display: block;
+    background: var(--primary);
+    text-align: center;
+    padding-top: 15px;
+    border: 1px solid var(--neutral);
+    color: var(--text);
+    text-decoration: none;
+}
+#sidebarMenu::-webkit-scrollbar {
+    width: 12px;
+}
+#sidebarMenu::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px; 
+}
+#sidebarMenu::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background: var(--primary);
+    height: 50px;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translatey(0);
+    top: var(--header-height) /*change here related your top menu height*/
+}
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 22px;
+    width: 35px;
+    left: 38px;
+    top: 38px;
+    display: none;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: (var(--text));
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .sidebarIconToggle {
+        display: block;
+    }
+    .burger-container {
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        display: none;
+    }
+}
