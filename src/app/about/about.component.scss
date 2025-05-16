@@ -1,8 +1,28 @@
+.layout {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    grid-gap: 10px;
+    // min-height: 100vh;
+    // overflow: scroll;
+}
+
+.me-img {
+    justify-content: center;
+    display: flex;
+    // margin-right: 30px;
+    margin-top: -60px;
+    img {
+        height: 260px;
+        border-radius: 60px;
+    }
+}
+
 /* Timeline Container */
 .timeline {
-  // background: var(--background);
+//   background: var(--background);
   // margin: 20px auto;
   padding: 20px;
+  padding-top: 4px;
   display: flex;
   justify-content: center;
 }
@@ -78,7 +98,7 @@
 .secondary-type {
   color: var(--text-secondary);
   position: relative;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 /* Title of the card */
@@ -111,4 +131,10 @@
 /* setting dot to the right if the card is even */
 .card:nth-child(even) > .info > .title::before {
   right: -45px;
+}
+
+@media screen and (max-width: 850px) {
+    .me-img {
+        display: none;
+    }
 }

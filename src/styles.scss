@@ -22,12 +22,12 @@ body {
 .background {
     display: block;
     width: 100vw; 
-    height: calc(100vh - var(--header-height)); 
+    height: calc(100% - var(--header-height)); 
     top: var(--header-height);
     position: absolute;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA;
+    // background-color: #FAFAFA;
     display: grid;
     justify-content: center;
 }

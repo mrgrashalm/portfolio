@@ -165,9 +165,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     .burger-container {
         display: grid;
     }
-}
-
-@media screen and (max-width: 850px) {
     .container {
         display: none;
     }
