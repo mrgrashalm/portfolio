@@ -2,7 +2,7 @@
 
 .small-logo {
     img {
-        height: 80px;
+        height: 120px;
     }
 }
 
@@ -11,13 +11,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 
-    h2 { 
+    h3 { 
         a {
             display: block;
             text-align: center;
             // padding-top: 15px;
             // border: 1px solid var(--neutral);
-            color: var(--primary);
+            color: var(--secondary);
             text-decoration: none;
         }
         
@@ -34,7 +34,8 @@
 // Menu
 
 .container {
-    background-color: var(--background);
+    // background-color: var(--primary);
+    background-image: linear-gradient(var(--primary), white);
     display: grid;
     grid-template-columns: 3fr 0.5fr;
     grid-gap: 10px;
