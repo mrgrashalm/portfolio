@@ -5,6 +5,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ImprintAndDataComponent } from './imprint-and-data/imprint-and-data.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
    {
@@ -16,10 +17,6 @@ const routes: Routes = [
     path: "about"
   },
   {
-    component: ColorsComponent,
-    path: "colors"
-  },
-  {
     component: ProjectsComponent,
     path: "projects"
   },  
@@ -28,9 +25,17 @@ const routes: Routes = [
     path: "imprint"
   },
   {
+    component: ContactComponent,
+    path: "contact"
+  },
+  {
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
+  },
+  {
+    path: '**',
+    redirectTo: "/home",
   }
 ];
 
