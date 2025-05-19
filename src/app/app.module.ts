@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
+import { ImprintAndDataComponent } from './imprint-and-data/imprint-and-data.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProjectsComponent } from './projects/projects.component';
     TimelineComponent,
     HeaderComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent,
+    ImprintAndDataComponent
   ],
   imports: [
     BrowserModule,

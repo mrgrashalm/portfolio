@@ -15,12 +15,9 @@
         a {
             display: block;
             text-align: center;
-            // padding-top: 15px;
-            // border: 1px solid var(--neutral);
             color: var(--secondary);
             text-decoration: none;
         }
-        
         align-content: center;
     }
 }
@@ -34,7 +31,6 @@
 // Menu
 
 .container {
-    // background-color: var(--primary);
     background-image: linear-gradient(var(--primary), white);
     display: grid;
     grid-template-columns: 3fr 0.5fr;
