@@ -1,1 +1,95 @@
-<p>punk-de works!</p>
+<div class="body-container">
+    <div class="body-content">
+        <app-header class="header-container">
+
+        </app-header>
+
+        <div class="background">
+
+            <!-- <h1 class="project-title">Drinkers</h1> -->
+            <img class="project-title-icon" alt="Drinkers Icon" src="assets/projects/drinkers/icon.png">
+
+            <div class="timeline">
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Projektbeschreibung Drinkers</h3>
+                            <p> Dieses Projekt ist während meines Studiums entstanden. Es wurde parallel zu meinen regulären Kursen entwickelt und diente sowohl als praktische Übung im Umgang mit modernen App-Technologien als auch als kreatives Experiment im Bereich Spielentwicklung.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                                <a class="gallery-item" href="assets/projects/drinkers/splash.webp">
+                                    <img class="img-responsive" alt="Splash-Screen" src="assets/projects/drinkers/thumbnails/splash.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Imprint.webp">
+                                    <img class="img-responsive" alt="Imprint" src="assets/projects/drinkers/thumbnails/Imprint.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Menu.webp">
+                                    <img class="img-responsive" alt="Menu" src="assets/projects/drinkers/thumbnails/Menu.webp">
+                                </a>
+                            </lightgallery>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Ziel</h3>
+                            <p>Ziel des Projekts ist die Entwicklung einer mobilen App für Android und iOS, die verschiedene kurzweilige Trinkspiele in einer Anwendung vereint. Die App soll möglichst viele kleine Minispiele enthalten, die alle eigenständig funktionieren und Spaß in geselligen Runden bringen – ob zu zweit oder in größerer Runde. Der Fokus liegt auf einfacher Bedienung, schnellem Einstieg und einem humorvollen, spielerischen Design.  </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                                <a class="gallery-item" href="assets/projects/drinkers/Maexle_1.webp">
+                                    <img class="img-responsive" alt="Maexle_1" src="assets/projects/drinkers/thumbnails/Maexle_1.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Maexle_1.webp">
+                                    <img class="img-responsive" alt="Maexle_2" src="assets/projects/drinkers/thumbnails/Maexle_2.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Dreimann_2.webp">
+                                    <img class="img-responsive" alt="Dreimann_2" src="assets/projects/drinkers/thumbnails/Dreimann_2.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Dreimann_1.webp">
+                                    <img class="img-responsive" alt="Dreimann_1" src="assets/projects/drinkers/thumbnails/Dreimann_1.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/drinkers/Ich_hab_noch_nie.webp">
+                                    <img class="img-responsive" alt="Ich_hab_noch_nie" src="assets/projects/drinkers/thumbnails/Ich_hab_noch_nie.webp">
+                                </a>
+                            </lightgallery>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Technologie</h3>
+                            <p>
+                                Technologisch basiert die App auf einem modernen Cross-Plattform-Stack, der eine gleichzeitige Entwicklung für Android und iOS ermöglicht. 
+                                Dadurch lässt sich die App effizient testen und bereitstellen, ohne zwei komplett separate Codebasen pflegen zu müssen.
+                            </p>
+
+                            <span>Verwendete Technologien:</span>
+                            <ul>
+                                <li><strong>React Native</strong> – Framework zur plattformübergreifenden Entwicklung mobiler Apps</li>
+                                <li><strong>Expo</strong> – Toolchain für einfaches Testing, Deployment und Geräteintegration</li>
+                                <li><strong>GitHub</strong> – Versionsverwaltung und Projektorganisation</li>
+                                <li><strong>Visual Studio Code</strong> – Entwicklungsumgebung</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Weiteres</h3>
+                            <p> Das Projekt ist weiterhin in Entwicklung, wird aber bereits regelmäßig getestet und erweitert. Es dient als Grundlage für weitere App-Projekte und als Demonstration meiner Fähigkeiten in React Native und mobiler App-Entwicklung. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>
+
