@@ -14,6 +14,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintAndDataComponent } from './imprint-and-data/imprint-and-data.component';
 import { ContactComponent } from './contact/contact.component';
+import { PunkDeComponent } from './my-projects/punk-de/punk-de.component';
+import { DrinkersComponent } from './my-projects/drinkers/drinkers.component';
+import { LightgalleryModule } from 'lightgallery/angular';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { ContactComponent } from './contact/contact.component';
     ProjectsComponent,
     FooterComponent,
     ImprintAndDataComponent,
-    ContactComponent
+    ContactComponent,
+    PunkDeComponent,
+    DrinkersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LightgalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,7 +31,7 @@
 // Menu
 
 .container {
-    background-image: linear-gradient(var(--primary), white);
+    background-image: linear-gradient(var(--primary), var(--background));
     display: grid;
     grid-template-columns: 3fr 0.5fr;
     grid-gap: 10px;
