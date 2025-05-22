@@ -1,7 +1,7 @@
 .container {
     // background-color: var(--primary);
     height: var(--footer-height);
-    background-image: linear-gradient(white, var(--primary));
+    background-image: linear-gradient(var(--secondary), var(--primary));
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -9,7 +9,7 @@
     align-items: center;
     
     div, a {
-        text-decoration: none;
-        color: var(--secondary);
+        text-decoration: none;  
+        color: var(--background);
     }
 }
