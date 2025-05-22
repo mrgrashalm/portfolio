@@ -8,6 +8,8 @@ import { ImprintAndDataComponent } from './imprint-and-data/imprint-and-data.com
 import { ContactComponent } from './contact/contact.component';
 import { PunkDeComponent } from './my-projects/punk-de/punk-de.component';
 import { DrinkersComponent } from './my-projects/drinkers/drinkers.component';
+import { WhatsPubInComponent } from './my-projects/whats-pub-in/whats-pub-in.component';
+import { AIFinderComponent } from './my-projects/aifinder/aifinder.component';
 
 const routes: Routes = [
    {
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     component: DrinkersComponent,
     path: "projects/drinkers"
+  },
+  {
+    component: WhatsPubInComponent,
+    path: "projects/whats-pub-in"
+  },
+  {
+    component: AIFinderComponent,
+    path: "projects/aifinder"
   },
   {
     path: "",

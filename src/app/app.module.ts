@@ -17,6 +17,8 @@ import { ContactComponent } from './contact/contact.component';
 import { PunkDeComponent } from './my-projects/punk-de/punk-de.component';
 import { DrinkersComponent } from './my-projects/drinkers/drinkers.component';
 import { LightgalleryModule } from 'lightgallery/angular';
+import { WhatsPubInComponent } from './my-projects/whats-pub-in/whats-pub-in.component';
+import { AIFinderComponent } from './my-projects/aifinder/aifinder.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { LightgalleryModule } from 'lightgallery/angular';
     ImprintAndDataComponent,
     ContactComponent,
     PunkDeComponent,
-    DrinkersComponent
+    DrinkersComponent,
+    WhatsPubInComponent,
+    AIFinderComponent
   ],
   imports: [
     BrowserModule,

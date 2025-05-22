@@ -1,0 +1,88 @@
+<div class="body-container">
+    <div class="body-content">
+        <app-header class="header-container">
+
+        </app-header>
+
+        <div class="background">
+
+            <img class="project-title-icon" alt="punk.de Icon" src="assets/projects/whats_pub_in/icon.png">
+
+            <div class="timeline">
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Projektbeschreibung</h3>
+                            <p> Dieses Projekt entstand im Rahmen eines Auslandsaufenthalts an der Ulster University in Belfast und wurde über mehrere Wochen entwickelt. Es handelt sich um eine Webanwendung, die ein klassisches Pub-Quiz digital abbildet – interaktiv, dynamisch und KI-gestützt. Die Umsetzung erfolgte unter Anleitung eines Dozenten der Ulster University und bot Raum für kreatives und technisches Experimentieren.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/landing.webp">
+                                    <img class="img-responsive" alt="landing" src="assets/projects/whats_pub_in/thumbnails/landing.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/loading.webp">
+                                    <img class="img-responsive" alt="loading" src="assets/projects/whats_pub_in/thumbnails/loading.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/teams.webp">
+                                    <img class="img-responsive" alt="teams" src="assets/projects/whats_pub_in/thumbnails/teams.webp">
+                                </a>
+                            </lightgallery>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Ziel</h3>
+                            <p>Das Hauptziel des Projekts war die Entwicklung einer Web-App, die es ermöglicht, Pub-Quiz-Runden flexibel und automatisch zu gestalten. Ein zentrales Feature bestand darin, dass die Quizfragen mithilfe von künstlicher Intelligenz generiert wurden – basierend auf Themen, die vom Spielleiter (Manager) eingegeben wurden. Dadurch sollten spontane und abwechslungsreiche Quiz-Abende ermöglicht werden, ohne manuelle Vorbereitung von Fragen. Für Spieler:innen bestand die Möglichkeit, sich mithilfe eines Zugangscodes zu einem Spiel anzumelden, einen Namen zu wählen, Fragen zu beantworten und anschließend die Lösungen sowie das Gesamtergebnis einzusehen. Manager:innen hatten die Möglichkeit, Themen auszuwählen, Runden und Pausenzeiten zu definieren, eine Musikrunde hinzuzufügen, Bilder einzubinden und den Spielablauf individuell zu gestalten.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/questions.webp">
+                                    <img class="img-responsive" alt="questions" src="assets/projects/whats_pub_in/thumbnails/questions.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/answers.webp">
+                                    <img class="img-responsive" alt="answers" src="assets/projects/whats_pub_in/thumbnails/answers.webp">
+                                </a>
+                                <a class="gallery-item" href="assets/projects/whats_pub_in/ranking.webp">
+                                    <img class="img-responsive" alt="ranking" src="assets/projects/whats_pub_in/thumbnails/ranking.webp">
+                                </a>
+                            </lightgallery>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Technologie</h3>
+                            <p>
+                                Die Web-App wurde vollständig selbst entwickelt und umfasste sowohl das Frontend als auch die Anbindung an ein intelligentes Fragegenerierungssystem im Backend.
+                            </p>
+
+                            <span>Verwendete Technologien:</span>
+                            <ul>
+                                <li><strong>Angular</strong> – Framework zur Entwicklung der Webanwendung</li>
+                                <li><strong>Flask</strong> – Backend-Framework für einfaches Erstellen und Benutzen</li>
+                                <li><strong>GitHub</strong> – Versionsverwaltung und Projektorganisation</li>
+                                <li><strong>Visual Studio Code</strong> – Entwicklungsumgebung</li>
+                                <li><strong>ChatGPT</strong> – Zur generierung der Fragen und Antworten</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Weiteres</h3>
+                            <p> Das Projekt diente nicht nur der technischen Vertiefung, sondern auch der Verbesserung interdisziplinärer Fähigkeiten wie Teamarbeit, Projektplanung, UX/UI-Konzeption und der Arbeit mit KI-Technologien. Es ist offen für Weiterentwicklung und bietet Potenzial für reale Einsätze in Bars, Kneipen oder digitalen Events. Die App wurde in einer Live-Demo erfolgreich mit Teilnehmergruppen getestet und stieß auf sehr positives Feedback – vor allem wegen ihrer einfachen Bedienung und der flexiblen Einsatzmöglichkeiten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>
+

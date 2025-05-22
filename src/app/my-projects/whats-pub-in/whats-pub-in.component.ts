@@ -3,11 +3,11 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 
 @Component({
-  selector: 'app-drinkers',
-  templateUrl: './drinkers.component.html',
-  styleUrls: ['./drinkers.component.scss']
+  selector: 'app-whats-pub-in',
+  templateUrl: './whats-pub-in.component.html',
+  styleUrls: ['./whats-pub-in.component.scss']
 })
-export class DrinkersComponent implements OnInit, OnDestroy {
+export class WhatsPubInComponent implements OnInit, OnDestroy {
 
     settings = {
         counter: false,
@@ -21,7 +21,7 @@ export class DrinkersComponent implements OnInit, OnDestroy {
     constructor() { }
 
     ngOnInit(): void {
-        document.documentElement.style.setProperty('--primary', '#c38622');
+        document.documentElement.style.setProperty('--primary', '#f09107');
         document.documentElement.style.setProperty('--font-family', 'Roboto, sans-serif');
     }
 

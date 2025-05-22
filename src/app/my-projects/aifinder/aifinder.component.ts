@@ -2,13 +2,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 
-@Component({
-  selector: 'app-drinkers',
-  templateUrl: './drinkers.component.html',
-  styleUrls: ['./drinkers.component.scss']
-})
-export class DrinkersComponent implements OnInit, OnDestroy {
 
+@Component({
+  selector: 'app-aifinder',
+  templateUrl: './aifinder.component.html',
+  styleUrls: ['./aifinder.component.scss']
+})
+export class AIFinderComponent implements OnInit, OnDestroy {
     settings = {
         counter: false,
         plugins: [lgZoom]
@@ -21,8 +21,8 @@ export class DrinkersComponent implements OnInit, OnDestroy {
     constructor() { }
 
     ngOnInit(): void {
-        document.documentElement.style.setProperty('--primary', '#c38622');
-        document.documentElement.style.setProperty('--font-family', 'Roboto, sans-serif');
+        document.documentElement.style.setProperty('--primary', '#ffaa33');
+        document.documentElement.style.setProperty('--font-family', 'Inter_24, sans-serif');
     }
 
     // Add any additional methods or properties you need for this component

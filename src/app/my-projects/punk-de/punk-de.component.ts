@@ -7,7 +7,7 @@ import { BeforeSlideDetail } from 'lightgallery/lg-events';
   templateUrl: './punk-de.component.html',
   styleUrls: ['./punk-de.component.scss']
 })
-export class PunkDeComponent {
+export class PunkDeComponent implements OnInit, OnDestroy {
 
     settings = {
         counter: false,
@@ -15,7 +15,6 @@ export class PunkDeComponent {
     };
     onBeforeSlide = (detail: BeforeSlideDetail): void => {
         const { index, prevIndex } = detail;
-        console.log(index, prevIndex);
     };
 
 

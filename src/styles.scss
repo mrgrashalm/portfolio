@@ -171,13 +171,6 @@ body {
   width: fit-content;
 }
 
-.project-title-icon {
-    height: 190px;
-    margin: 10px auto -30px auto;
-    display: flex;
-    justify-content: center;
-}
-
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
