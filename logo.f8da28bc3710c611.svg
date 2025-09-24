@@ -1,0 +1,14 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- M links -->
+  <text x="3" y="85" font-family="Segoe UI, sans-serif" font-size="72" font-weight="bold"
+        fill="#8B5E3C" letter-spacing="-4">M</text>
+
+  <!-- M rechts -->
+  <text x="60" y="85" font-family="Segoe UI, sans-serif" font-size="72" font-weight="bold"
+        fill="#472A1A">M</text> 
+  
+<!-- J in der Mitte -->
+  <text x="44" y="110" font-family="Segoe UI, sans-serif" font-size="72" font-weight="bold"
+        fill="#FF8C3A" letter-spacing="-4">J</text>
+</svg>

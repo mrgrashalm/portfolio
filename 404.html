@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>Marian J. Mannert - Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/logo.svg">
+<style>@import"https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css";@import"https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css";:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(fa-brands-400.86ee2658f0f3b5a5.woff2) format("woff2"),url(fa-brands-400.8eaf0c8893de015e.ttf) format("truetype")}:root{--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(fa-regular-400.849b82e233cfe2f9.woff2) format("woff2"),url(fa-regular-400.bd1cf947e4932a4d.ttf) format("truetype")}:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(fa-solid-900.ee6983981ffcbb41.woff2) format("woff2"),url(fa-solid-900.7a5aa5abd625137f.ttf) format("truetype")}:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(fa-brands-400.86ee2658f0f3b5a5.woff2) format("woff2"),url(fa-brands-400.8eaf0c8893de015e.ttf) format("truetype")}:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(fa-regular-400.849b82e233cfe2f9.woff2) format("woff2"),url(fa-regular-400.bd1cf947e4932a4d.ttf) format("truetype")}:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(fa-solid-900.ee6983981ffcbb41.woff2) format("woff2"),url(fa-solid-900.7a5aa5abd625137f.ttf) format("truetype")}:root{--background:rgb(250, 250, 250);--primary:#FF8C3A;--primary-hover:#472A1A;--secondary:#472A1A;--text:#121212;--text-secondary:#6b6b6b;--neutral:rgb(255, 255, 255, .8);--header-height:90px;--footer-height:40px;--font-family:Arial, Helvetica, sans-serif}html,body{height:100%;margin:0;font-family:var(--font-family)}</style><link rel="stylesheet" href="styles.245a96da2a88209f.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.245a96da2a88209f.css"></noscript></head>
+<body>
+  <app-root>
+    <style>
+        .app-splash-screen {
+          background: linear-gradient(65deg, var(--primary), var(--background));
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          z-index: 100;
+          transition: left 0.5s;
+        }
+
+        .app-label {
+          margin-top: 32px;
+          color: var(--secondary);
+          font-size: 2em;
+          font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+        }
+
+        .app-splash-inner {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .app-logo {
+          background: url("./../../assets/logo.svg");
+          background-repeat: no-repeat;
+          max-width: 100%;
+          background-position: center;
+          background-size: contain;
+          width: 300px;
+          height: 300px;
+        }
+
+
+        .job { margin-bottom: 2rem; }
+        .job h2 { margin: 0.3rem 0; }
+        .skills { color: #555; font-size: 0.9rem; }
+    </style>
+    <section>
+        <div class="app-splash-screen" [ngstyle]="{ left: windowWidth }" *ngif="showSplash">
+          <div class="app-splash-inner">
+            <div class="app-logo"></div>
+            <div class="app-label">MarianMannert.de</div>
+          </div>
+        </div>
+
+    </section>
+  </app-root>
+<script src="runtime.e5db3b66226f7dcb.js" type="module"></script><script src="polyfills.2159ad2034caf7cb.js" type="module"></script><script src="main.7c55a7a1b8d127d4.js" type="module"></script></body>
+</html>
