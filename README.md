@@ -22,6 +22,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## New stuff live on marianmannert.de
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Save changes
+2. Commit and Push
+3. ng build ausführen um /dist zu aktualisieren
+4. npx angular-cli-ghpages --dir=dist/portfolio-website    -- ausführen
+5. On github/settings/pages/ -> Custom domain -> www.marianmannert.de eintragen und speichern
