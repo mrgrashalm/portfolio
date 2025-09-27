@@ -10,6 +10,8 @@ import { PunkDeComponent } from './my-projects/punk-de/punk-de.component';
 import { DrinkersComponent } from './my-projects/drinkers/drinkers.component';
 import { WhatsPubInComponent } from './my-projects/whats-pub-in/whats-pub-in.component';
 import { AIFinderComponent } from './my-projects/aifinder/aifinder.component';
+import { DrinkerImprintComponent } from './drinker/drinker-imprint/drinker-imprint.component';
+import { DrinkerDataComponent } from './drinker/drinker-data/drinker-data.component';
 
 const routes: Routes = [
    {
@@ -47,6 +49,14 @@ const routes: Routes = [
   {
     component: AIFinderComponent,
     path: "projects/aifinder"
+  },
+  {
+    component: DrinkerImprintComponent,
+    path: "drinker/imprint"
+  },
+  {
+    component: DrinkerDataComponent,
+    path: "drinker/data"
   },
   {
     path: "",
