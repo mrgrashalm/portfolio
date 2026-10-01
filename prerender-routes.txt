@@ -1,0 +1,13 @@
+/
+/about
+/projects
+/lebenslauf
+/contact
+/imprint
+/projects/punk-de
+/projects/aifinder
+/projects/drinkers
+/projects/whats-pub-in
+/drinker/imprint
+/drinker/data
+/home

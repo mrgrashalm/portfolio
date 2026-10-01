@@ -1,55 +1,22 @@
+<header class="header" [class.open]="menuOpen">
+    <div class="wrap bar">
+        <a class="brand" routerLink="/" (click)="closeMenu()">
+            <img src="assets/logo.svg" alt="">
+            <span>Marian Mannert</span>
+        </a>
 
-<div class="burger-container">
-    <div>
-        <input type="checkbox"  class="openSidebarMenu" id="openSidebarMenu"/>
-        <label for="openSidebarMenu" class="sidebarIconToggle">
-            <div class="spinner diagonal part-1"></div>
-            <div class="spinner horizontal"></div>
-            <div class="spinner diagonal part-2"></div>
-        </label>
-        <div id="sidebarMenu">
-            <div class="main-content-wrapper">
-                <a routerLink="/about">About</a>
-                <a routerLink="/home">Lebenslauf</a>
-                <a routerLink="/projects">Projects</a>
-                <a routerLink="/contact">Kontakt</a>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="header-right">
-            <div class="small-logo">
-                <img rel="preload" src="assets/logo.svg">
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="container">
-
-    <div class="header-middle">
-        <h3>
-            <a routerLink="/home">Lebenslauf</a>
-        </h3> 
-        <h3>
-            <a routerLink="/about">About</a>
-        </h3> 
-        <h3>
-            <a routerLink="/projects">Projekte</a>
-        </h3> 
-        <h3>
-            <a routerLink="/contact">Kontakt</a>
-        </h3> 
-    </div>
-
-    <div class="header-right">
-        <div class="small-logo">
-            <a routerLink="/home">
-                <img rel="preload" src="assets/logo.svg">
+        <nav class="nav" id="main-nav">
+            <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" (click)="closeMenu()">
+                {{ link.label }}
             </a>
-        </div>
+            <a class="btn btn-primary nav-cta" routerLink="/contact" (click)="closeMenu()">Projekt anfragen</a>
+        </nav>
+
+        <button class="burger" type="button" aria-controls="main-nav" [attr.aria-expanded]="menuOpen"
+            [attr.aria-label]="menuOpen ? 'Menü schließen' : 'Menü öffnen'" (click)="menuOpen = !menuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-    
-</div>
+</header>

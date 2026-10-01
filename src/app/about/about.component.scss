@@ -1,25 +1,130 @@
-.layout {
+.profile {
     display: grid;
-    grid-template-columns: 3fr auto;
-    grid-gap: 10px;
-    // min-height: 100vh;
-    // overflow: scroll;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.me-img {
-    justify-content: center;
-    display: flex;
-    // margin-right: 30px;
-    margin-top: -60px;
-    img {
-        height: 260px;
-        border-radius: 60px;
+.photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    box-shadow: var(--shadow-hover);
+}
+
+.profile-card {
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+
+    h2 {
+        margin: 0 0 16px;
+        font-size: 1.35rem;
+    }
+
+    dl {
+        margin: 0;
+
+        div {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    dt {
+        font-weight: 600;
+        color: var(--brand-brown);
+    }
+
+    dd {
+        margin: 0;
     }
 }
 
+.texts {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    padding-bottom: 72px;
+
+    .wide {
+        grid-column: 1 / -1;
+    }
+}
+
+.philosophy blockquote {
+    margin: 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--brand-orange);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--brand-brown);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
 
 @media screen and (max-width: 850px) {
-    .me-img {
-        display: none;
+    .profile {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        width: min(70%, 260px);
+        justify-self: center;
+    }
+
+    .texts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile-card {
+        padding: 20px;
+
+        dl div {
+            grid-template-columns: 1fr;
+            gap: 2px;
+        }
+    }
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 32px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding-left: 16px;
+        border-left: 3px solid var(--brand-orange);
+    }
+
+    strong {
+        color: var(--brand-brown);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .benefits {
+        grid-template-columns: 1fr;
     }
 }

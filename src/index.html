@@ -1,73 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Marian J. Mannert - Portfolio</title>
+  <title>Marian J. Mannert – Projektleitung, Frontend & UI/UX aus Augsburg</title>
+  <meta name="description" content="Selbstständiger Projektleiter und Frontend-Entwickler aus Augsburg. Websites und Web-Apps mit Angular, React und Laravel – testfokussiert entwickelt, gemeinsam mit einem Netzwerk aus selbstständigen Spezialisten.">
+  <meta name="author" content="Marian J. Mannert">
+  <meta name="theme-color" content="#FAF8F5">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.marianmannert.de/#person",
+        "name": "Marian J. Mannert",
+        "jobTitle": "Projektleiter & Frontend-Entwickler",
+        "url": "https://www.marianmannert.de/",
+        "image": "https://www.marianmannert.de/assets/me.webp",
+        "email": "mailto:kontakt@marianmannert.de",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Augsburg",
+          "addressCountry": "DE"
+        },
+        "knowsAbout": ["Projektleitung", "Frontend-Entwicklung", "UI/UX-Design", "Angular", "React", "Laravel", "TypeScript", "Testfokussierte Entwicklung"],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Technische Hochschule Augsburg"
+        },
+        "sameAs": ["https://www.linkedin.com/in/marian-mannert-241800204/"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.marianmannert.de/#service",
+        "name": "Marian J. Mannert – Projektleitung, Frontend & UI/UX",
+        "url": "https://www.marianmannert.de/",
+        "image": "https://www.marianmannert.de/assets/og-image.png",
+        "email": "kontakt@marianmannert.de",
+        "founder": { "@id": "https://www.marianmannert.de/#person" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Augsburg",
+          "addressCountry": "DE"
+        },
+        "areaServed": "DE",
+        "knowsLanguage": ["de", "en"],
+        "serviceType": ["Projektleitung", "Frontend-Entwicklung", "UI/UX-Design", "Beratung"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <app-root>
-    <style>
-        .app-splash-screen {
-          background: linear-gradient(65deg, var(--primary), var(--background));
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          z-index: 100;
-          transition: left 0.5s;
-        }
-
-        .app-label {
-          margin-top: 32px;
-          color: var(--secondary);
-          font-size: 2em;
-          font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-        }
-
-        .app-splash-inner {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .app-logo {
-          background: url("./../../assets/logo.svg");
-          background-repeat: no-repeat;
-          max-width: 100%;
-          background-position: center;
-          background-size: contain;
-          width: 300px;
-          height: 300px;
-        }
-
-
-        .job { margin-bottom: 2rem; }
-        .job h2 { margin: 0.3rem 0; }
-        .skills { color: #555; font-size: 0.9rem; }
-    </style>
-    <section>
-        <div
-          class="app-splash-screen"
-          [ngStyle]="{ left: windowWidth }"
-          *ngIf="showSplash"
-        >
-          <div class="app-splash-inner">
-            <div class="app-logo"></div>
-            <div class="app-label">MarianMannert.de</div>
-          </div>
-        </div>
-
-    </section>
-  </app-root>
+  <app-root></app-root>
 </body>
 </html>

@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 1. Save changes
 2. Commit and Push
-3. ng build ausführen um /dist zu aktualisieren
-4. npx angular-cli-ghpages --dir=dist/portfolio-website    -- ausführen
-5. On github/settings/pages/ -> Custom domain -> www.marianmannert.de eintragen und speichern
+3. `npm run deploy` ausführen
+
+`npm run deploy` rendert alle Seiten aus `prerender-routes.txt` als statisches HTML vor (wichtig für SEO: jede Seite hat eigenes HTML mit eigenem Titel und wird von GitHub Pages mit Status 200 ausgeliefert) und veröffentlicht `dist/portfolio-website/browser` inklusive Custom Domain auf GitHub Pages.
+
+## Neue Seite hinzufügen (SEO)
+
+1. Route mit `data.seo` (Titel und Beschreibung) in `src/app/app-routing.module.ts` anlegen
+2. Pfad in `prerender-routes.txt` eintragen
+3. URL in `src/sitemap.xml` eintragen

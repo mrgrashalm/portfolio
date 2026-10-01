@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 
@@ -8,6 +9,10 @@ import { BeforeSlideDetail } from 'lightgallery/lg-events';
   styleUrls: ['./punk-de.component.scss']
 })
 export class PunkDeComponent implements OnInit, OnDestroy {
+    private document = inject(DOCUMENT);
+
+    // lightgallery needs `window`, so the galleries are only rendered in the browser (not when prerendering)
+    isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
     settings = {
         counter: false,
@@ -21,14 +26,14 @@ export class PunkDeComponent implements OnInit, OnDestroy {
     constructor() { }
 
     ngOnInit(): void {
-        document.documentElement.style.setProperty('--primary', '#B41B6D');
-        document.documentElement.style.setProperty('--font-family', 'Jersey25, sans-serif');
+        this.document.documentElement.style.setProperty('--primary', '#B41B6D');
+        this.document.documentElement.style.setProperty('--font-family', 'Jersey25, sans-serif');
     }
 
     // Add any additional methods or properties you need for this component
 
     ngOnDestroy(): void {
-        document.documentElement.style.setProperty('--primary', '#FF8C3A');
-        document.documentElement.style.setProperty('--font-family', 'Arial, Helvetica, sans-serif');
+        this.document.documentElement.style.removeProperty('--primary');
+        this.document.documentElement.style.removeProperty('--font-family');
     }
 }

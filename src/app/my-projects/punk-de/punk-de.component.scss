@@ -12,3 +12,49 @@
     display: flex;
     justify-content: center;
 }
+// Link to the live website
+.live-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+
+.live-badge {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.live-text {
+    flex: 1;
+
+    strong {
+        display: block;
+        font-size: 1.2rem;
+    }
+}
+
+.live-link {
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .live-banner {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}

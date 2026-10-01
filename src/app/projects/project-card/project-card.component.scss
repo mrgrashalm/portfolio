@@ -1,0 +1,133 @@
+:host {
+    display: block;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-hover);
+    }
+}
+
+// Screenshot composition on a tinted background in the project color
+.stage {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--project-color) 35%, transparent), transparent 70%),
+        color-mix(in srgb, var(--project-color) 10%, var(--surface));
+
+    img {
+        position: absolute;
+        left: 50%;
+        bottom: -24px;
+        height: 230px;
+        width: auto;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        transition: transform 0.4s ease;
+
+        &:nth-child(1) {
+            transform: translateX(-150%) rotate(-8deg);
+        }
+
+        &:nth-child(2) {
+            z-index: 1;
+            transform: translateX(-50%) translateY(-12px);
+        }
+
+        &:nth-child(3) {
+            transform: translateX(50%) rotate(8deg);
+        }
+    }
+
+    &.landscape img {
+        height: auto;
+        width: 52%;
+        bottom: auto;
+        top: 50%;
+
+        &:nth-child(1) {
+            transform: translate(-85%, -62%) rotate(-5deg);
+        }
+
+        &:nth-child(2) {
+            transform: translate(-50%, -38%);
+        }
+
+        &:nth-child(3) {
+            transform: translate(-15%, -62%) rotate(5deg);
+        }
+    }
+}
+
+.card:hover .stage img {
+    &:nth-child(1) {
+        transform: translateX(-160%) rotate(-11deg);
+    }
+
+    &:nth-child(2) {
+        transform: translateX(-50%) translateY(-20px);
+    }
+
+    &:nth-child(3) {
+        transform: translateX(60%) rotate(11deg);
+    }
+}
+
+.card:hover .stage.landscape img {
+    &:nth-child(1) {
+        transform: translate(-92%, -66%) rotate(-7deg);
+    }
+
+    &:nth-child(2) {
+        transform: translate(-50%, -42%);
+    }
+
+    &:nth-child(3) {
+        transform: translate(-8%, -66%) rotate(7deg);
+    }
+}
+
+.body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+
+    h3 {
+        margin: 0;
+        font-size: 1.35rem;
+    }
+
+    p {
+        margin: 0;
+        color: var(--text-secondary);
+    }
+
+    .link-arrow {
+        margin-top: auto;
+        padding-top: 8px;
+        color: var(--brand-orange-text);
+    }
+}
+
+.category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--brand-brown-mid);
+}

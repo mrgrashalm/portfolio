@@ -1,15 +1,18 @@
-<div class="body-container">
-    <div class="body-content">
-        <app-header class="header-container">
+<div class="background">
 
-        </app-header>
-
-        <div class="background">
-
+            <h1 class="visually-hidden">Punk.de – UI/UX-Redesign eines Onlineshops</h1>
             <img class="project-title-icon" alt="punk.de Icon" src="assets/projects/punk_de/icon.png">
 
             <div class="timeline">
                 <div class="outer">
+                    <a class="card live-banner" href="https://www.punk.de" target="_blank" rel="noopener noreferrer">
+                        <span class="live-badge">Live</span>
+                        <span class="live-text">
+                            <strong>Das neue punk.de ist online</strong>
+                            Im Herbst 2026 mit meinem Team fertiggestellt.
+                        </span>
+                        <span class="live-link">Zur Website <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
                     <div class="card">
                         <div class="info">
                             <h3 class="title">Projektbeschreibung</h3>
@@ -19,7 +22,7 @@
                     </div>
                     <div class="card">
                         <div class="info">
-                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                            <lightgallery *ngIf="isBrowser" [settings]="settings" [onBeforeSlide]="onBeforeSlide">
                                 <a class="gallery-item" href="assets/projects/punk_de/Band Merch.webp">
                                     <img class="img-responsive" alt="Band Merch" src="assets/projects/punk_de/thumbnails/Band Merch.webp">
                                 </a>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="card">
                         <div class="info">
-                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                            <lightgallery *ngIf="isBrowser" [settings]="settings" [onBeforeSlide]="onBeforeSlide">
                                 <a class="gallery-item" href="assets/projects/punk_de/Tickets.webp">
                                     <img class="img-responsive" alt="Tickets" src="assets/projects/punk_de/thumbnails/Tickets.webp">
                                 </a>
@@ -87,16 +90,16 @@
                     <div class="card">
                         <div class="info">
                             <h3 class="title">Weiteres</h3>
-                            <p> Die Rückmeldungen aus den Tests waren überwiegend positiv: Die Nutzer lobten insbesondere die verbesserte Usability, das aufgeräumte Design und die schnellere Produktsuche. Kritikpunkte wie „zu minimalistisch“ oder „wenig Punk-Flair“ wurden ernst genommen und flossen in kleine gestalterische Anpassungen ein (z. B. auffälligere Buttons, „Splash“-Style im Footer). Der finale Prototyp wurde nun dem Betreiber von punk.de vorgestellt und über weitere Schritte verhandelt. </p>
+                            <p> Die Rückmeldungen aus den Tests waren überwiegend positiv: Die Nutzer lobten insbesondere die verbesserte Usability, das aufgeräumte Design und die schnellere Produktsuche. Kritikpunkte wie „zu minimalistisch“ oder „wenig Punk-Flair“ wurden ernst genommen und flossen in kleine gestalterische Anpassungen ein (z. B. auffälligere Buttons, „Splash“-Style im Footer). Der finale Prototyp wurde anschließend dem Betreiber von punk.de vorgestellt. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Vom Prototyp zur fertigen Website</h3>
+                            <p> Nach der Vorstellung des Prototyps beim Betreiber von punk.de habe ich das Redesign gemeinsam mit meinem Team aus selbstständigen Spezialist:innen umgesetzt. Im Herbst 2026 wurde das Projekt fertiggestellt – <a href="https://www.punk.de" target="_blank" rel="noopener noreferrer">das neue punk.de ist jetzt online</a>. </p>
                         </div>
                     </div>
                 </div>
             </div>
             
         </div>
-    </div>
-    <div class="footer">
-        <app-footer></app-footer>
-    </div>
-</div>
-

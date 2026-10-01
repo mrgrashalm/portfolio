@@ -1,15 +1,64 @@
-.container {
-    // background-color: var(--primary);
-    height: var(--footer-height);
-    background-image: linear-gradient(var(--secondary), var(--primary));
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    text-align: center;
+.footer {
+    background: var(--brand-brown);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    
-    div, a {
-        text-decoration: none;  
-        color: var(--background);
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        height: 28px;
+        width: 28px;
+        // logo letters are brown – lighten them on the dark footer
+        filter: brightness(0) invert(1);
+        opacity: 0.85;
+    }
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+
+    a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: var(--brand-orange);
+        }
+    }
+
+    .icon {
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 16px 20px;
     }
 }

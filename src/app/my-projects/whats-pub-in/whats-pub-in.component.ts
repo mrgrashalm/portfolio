@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 
@@ -8,6 +9,10 @@ import { BeforeSlideDetail } from 'lightgallery/lg-events';
   styleUrls: ['./whats-pub-in.component.scss']
 })
 export class WhatsPubInComponent implements OnInit, OnDestroy {
+    private document = inject(DOCUMENT);
+
+    // lightgallery needs `window`, so the galleries are only rendered in the browser (not when prerendering)
+    isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
     settings = {
         counter: false,
@@ -21,14 +26,14 @@ export class WhatsPubInComponent implements OnInit, OnDestroy {
     constructor() { }
 
     ngOnInit(): void {
-        document.documentElement.style.setProperty('--primary', '#f09107');
-        document.documentElement.style.setProperty('--font-family', 'Roboto, sans-serif');
+        this.document.documentElement.style.setProperty('--primary', '#f09107');
+        this.document.documentElement.style.setProperty('--font-family', 'Roboto, sans-serif');
     }
 
     // Add any additional methods or properties you need for this component
 
     ngOnDestroy(): void {
-        document.documentElement.style.setProperty('--primary', '#FF8C3A');
-        document.documentElement.style.setProperty('--font-family', 'Arial, Helvetica, sans-serif');
+        this.document.documentElement.style.removeProperty('--primary');
+        this.document.documentElement.style.removeProperty('--font-family');
     }
 }

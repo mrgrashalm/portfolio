@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio-website",
+            "outputPath": "dist/portfolio-website/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -27,7 +27,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -45,8 +47,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all",
@@ -99,6 +101,61 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/portfolio-website/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "sourceMap": false
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": true,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "portfolio-website:build:development",
+              "serverTarget": "portfolio-website:server:development"
+            },
+            "production": {
+              "browserTarget": "portfolio-website:build:production",
+              "serverTarget": "portfolio-website:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routesFile": "prerender-routes.txt",
+            "guessRoutes": false
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "portfolio-website:build:production",
+              "serverTarget": "portfolio-website:server:production"
+            },
+            "development": {
+              "browserTarget": "portfolio-website:build:development",
+              "serverTarget": "portfolio-website:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

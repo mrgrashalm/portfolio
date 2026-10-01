@@ -1,11 +1,17 @@
-<div class="container">
-    <div>
-        <a routerLink="/imprint">Impressum & Datenschutz</a>
+<footer class="footer">
+    <div class="wrap row">
+        <div class="brand">
+            <img src="assets/logo.svg" alt="">
+            <span>© {{ year }} Marian Mannert</span>
+        </div>
+
+        <nav class="links">
+            <a routerLink="/imprint">Impressum & Datenschutz</a>
+            <a href="./assets/AGB_05-25.pdf" download="AGB">AGB</a>
+            <a href="mailto:kontakt@marianmannert.de">E-Mail</a>
+            <a class="icon" href="https://www.linkedin.com/in/marian-mannert-241800204/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </nav>
     </div>
-    <div>
-        <a href="./assets/AGB_05-25.pdf" download="AGB">AGB</a>
-    </div>
-    <div>
-         <a href="https://www.linkedin.com/in/marian-mannert-241800204/">LinkedIn</a>
-    </div>
-</div>
+</footer>

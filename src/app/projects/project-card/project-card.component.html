@@ -1,0 +1,15 @@
+<a class="card" [routerLink]="project.route" [style.--project-color]="project.color">
+    <div class="stage" [class.landscape]="project.format === 'landscape'">
+        <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" loading="lazy">
+    </div>
+
+    <div class="body">
+        <span class="category">{{ project.category }}</span>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary }}</p>
+        <ul class="chips">
+            <li class="chip" *ngFor="let tag of project.tags">{{ tag }}</li>
+        </ul>
+        <span class="link-arrow">Projekt ansehen<i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+</a>

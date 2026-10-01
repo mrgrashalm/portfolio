@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { LandingComponent } from './landing/landing.component';
 import { ColorsComponent } from './colors/colors.component';
 import { TimelineComponent } from './timeline/timeline.component';
@@ -21,11 +20,12 @@ import { WhatsPubInComponent } from './my-projects/whats-pub-in/whats-pub-in.com
 import { AIFinderComponent } from './my-projects/aifinder/aifinder.component';
 import { DrinkerImprintComponent } from './drinker/drinker-imprint/drinker-imprint.component';
 import { DrinkerDataComponent } from './drinker/drinker-data/drinker-data.component';
+import { CvComponent } from './cv/cv.component';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent,
     LandingComponent,
     ColorsComponent,
     TimelineComponent,
@@ -40,7 +40,9 @@ import { DrinkerDataComponent } from './drinker/drinker-data/drinker-data.compon
     WhatsPubInComponent,
     AIFinderComponent,
     DrinkerImprintComponent,
-    DrinkerDataComponent
+    DrinkerDataComponent,
+    CvComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

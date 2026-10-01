@@ -1,11 +1,6 @@
-<div class="body-container">
-    <div class="body-content">
-        <app-header class="header-container">
+<div class="background">
 
-        </app-header>
-
-        <div class="background">
-
+            <h1 class="visually-hidden">AI-Finder – Vergleichsplattform für KI-Tools</h1>
             <img class="project-title-icon" alt="AI Finder Icon" src="assets/projects/ai_finder/icon.png">
 
             <div class="timeline">
@@ -19,7 +14,7 @@
                     </div>
                     <div class="card">
                         <div class="info">
-                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                            <lightgallery *ngIf="isBrowser" [settings]="settings" [onBeforeSlide]="onBeforeSlide">
                                 <a class="gallery-item" href="assets/projects/ai_finder/Wizard-Role.webp">
                                     <img class="img-responsive" alt="Wizard-Role" src="assets/projects/ai_finder/thumbnails/Wizard-Role.webp">
                                 </a>
@@ -56,7 +51,7 @@
                     </div>
                     <div class="card">
                         <div class="info">
-                            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+                            <lightgallery *ngIf="isBrowser" [settings]="settings" [onBeforeSlide]="onBeforeSlide">
                                 <a class="gallery-item" href="assets/projects/ai_finder/About us.webp">
                                     <img class="img-responsive" alt="About us" src="assets/projects/ai_finder/thumbnails/About us.webp">
                                 </a>
@@ -122,9 +117,3 @@
             </div>
             
         </div>
-    </div>
-    <div class="footer">
-        <app-footer></app-footer>
-    </div>
-</div>
-
