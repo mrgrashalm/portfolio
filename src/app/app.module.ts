@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { UrlSerializer } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { DrinkerImprintComponent } from './drinker/drinker-imprint/drinker-impri
 import { DrinkerDataComponent } from './drinker/drinker-data/drinker-data.component';
 import { CvComponent } from './cv/cv.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
+import { TrailingSlashUrlSerializer } from './trailing-slash-url-serializer';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
     AppRoutingModule,
     LightgalleryModule
   ],
-  providers: [],
+  providers: [
+    { provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
