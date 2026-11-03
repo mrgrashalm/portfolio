@@ -29,7 +29,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              { "glob": "**/*", "input": "src/drinkers", "output": "drinkers" }
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
